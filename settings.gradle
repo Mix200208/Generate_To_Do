@@ -1,0 +1,2 @@
+rootProject.name = "Find to Do"
+include ':app'
