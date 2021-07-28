@@ -8,8 +8,8 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.bumptech.glide.Glide
 import com.example.findtodo.databinding.ActivityMainBinding
-import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                     textJob.visibility = View.VISIBLE
                     jobImage.visibility = View.VISIBLE
                     textJob.text = data.activity
-                    Picasso.get().load(urlImagesMap[data.type]).into(jobImage)
+                    Glide.with(this@MainActivity).load(urlImagesMap[data.type]).into(jobImage)
 
                 }
 
