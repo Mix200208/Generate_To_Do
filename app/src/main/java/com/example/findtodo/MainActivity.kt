@@ -1,15 +1,13 @@
 package com.example.findtodo
 
-import android.media.Image
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import com.bumptech.glide.Glide
 import com.example.findtodo.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -17,7 +15,6 @@ import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.awaitResponse
 import retrofit2.converter.gson.GsonConverterFactory
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 const val BASE_URL = "https://www.boredapi.com"
@@ -25,7 +22,7 @@ const val BASE_URL = "https://www.boredapi.com"
 
 class MainActivity : AppCompatActivity() {
 
-    private val urlImagesMap = mutableMapOf<String,String>(
+    private val urlImagesMap = mutableMapOf<String, String>(
         "education" to "https://clck.ru/WTtLX",
         "social" to "https://clck.ru/WTtQB",
         "recreational" to "https://clck.ru/WTtSo",
@@ -44,14 +41,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-        val binding:ActivityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        val binding: ActivityMainBinding =
+            DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         getCurrentData()
 
 
-        val getButton = findViewById<Button>(R.id.generateButton)
-
-        getButton.setOnClickListener() {
+        binding.generateButton.setOnClickListener() {
             getCurrentData()
         }
 
