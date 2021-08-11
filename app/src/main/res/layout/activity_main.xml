@@ -11,70 +11,77 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#e9e9e9"
+        android:orientation="vertical"
         >
 
         <TextView
             android:id="@+id/supMessage"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginTop="10dp"
             android:text="Press on button"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/jobImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:layout_margin="10dp"
             app:layout_constrainedHeight="true"
-            android:minHeight="300dp"
+            android:src="@drawable/diy"
             android:layout_marginTop="10sp"
-            app:layout_constraintTop_toBottomOf="@id/supMessage"
             />
         <TextView
             android:id="@+id/textJob"
             android:layout_margin="10dp"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{JobJson.activity}"
-            android:textSize="18dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_weight="2"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/jobImage"
             />
 
-        <android.widget.Button
-            android:id="@+id/generateButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Get to Do"
-            android:textColor="@color/white"
-            android:background="@drawable/round_button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textJob" />
+            android:layout_weight="1"
+            android:gravity="center">
+            <android.widget.Button
+                android:id="@+id/generateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Get to Do"
+                android:textColor="@color/white"
+                android:background="@drawable/round_button"
+                />
+
+
+        </LinearLayout>
 
 
 
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 
 </layout>
