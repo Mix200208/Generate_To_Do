@@ -1,4 +1,4 @@
-# Генерация заданий 
+# Генерация заданий (Pet Project)
 ![Find to do](https://user-images.githubusercontent.com/58069279/129069073-04816352-3d21-442c-a044-4332d51b0421.png)
 
 ## О приложении
@@ -9,7 +9,7 @@
 
 [The Bored Api](https://www.boredapi.com) - использовал в качестве Api.
 
-[Retrofit2](https://square.github.io/retrofit/) - типобезопасный HTTP-клиент для Android.
+[Retrofi2](https://square.github.io/retrofit/) - типобезопасный HTTP-клиент для Android.
 
 [Glide](https://bumptech.github.io/glide/doc/generatedapi.html) - загрузка изображений из интернета.
 
